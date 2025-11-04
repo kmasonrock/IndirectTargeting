@@ -1,0 +1,45 @@
+[UniversalVars] #Variables used in multiple parts of the program
+    _log_space = false #If you're working in linear (false) vs log (true) space
+
+[DynamicsVars] #Variables that are specific to simulating consumer resource dynamics
+    _e_herb = 0.45
+    _e_carn = 0.85
+    _y = 6.0
+    _dxdr = 0.597
+    _Z = 10.0
+    _m_trophic = -0.25
+    _w = 0.05
+    _B0 = 1.0
+    _h = 1.2
+    _m_migrate = 1e-10
+    _dyn_abstol = 1e-10
+    _dyn_reltol = 1e-8
+
+[NetworkGenVars] #Variables that are specific to network generation via niche model
+    _beta = 1.5
+    _extinction_threshold = 1e-8
+    _fixedpoint_threshold = 1e-5
+    _ngen_abstol = 1e-5
+    _ngen_reltol = 1e-5
+    _netgen_integrate_time = [0.0, 50_000.0]
+    _init_B = 1.0
+    _starting_B = 1e-3
+    _basal_limit = 0.30
+    _netgen_iter_limit = 50_000.0
+
+[OptimizationVars] #Variables that are specific to the optimization algorithm
+    _opt_iter_limit = 700 #If we don't make it in 300 iterations, we probably wont make it at all.
+    _basal_lb = 1e-10
+    _nonbasal_lb = 1e-10
+    _closest_time = [0.0, 100.0]
+    _opt_integrate_time = [0.0, 5000.0]
+    _targets = [[0.0]]
+    _invaders = [0]
+    _max_epsilon = 0.1
+    _min_epsilon = 0.001
+    _extinction = 2e-9
+    _time_increment = 0.01
+    _opt_abstol = 1e-10
+    _opt_reltol = 1e-8
+    _opt_maxiters = 1e5
+
