@@ -37,7 +37,7 @@
     _invaders = [0]
     _max_epsilon = 0.1
     _min_epsilon = 0.001
-    _extinction = 2e-9
+    _extinction = 1e-9
     _time_increment = 0.01
     _opt_abstol = 1e-10
     _opt_reltol = 1e-8
