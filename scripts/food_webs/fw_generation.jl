@@ -147,7 +147,7 @@ function get_consumers(η_vec, c_vec)
 end
 
 function has_cycles(g)
-    return isempty(simplecycles(g)) ? false : argmax(length.(simplecycles(g))) > 1
+    return isempty(simplecycles(g)) ? false : max(length.(simplecycles(g))) > 1
 end
 
 function add_species(u0, η0, r0, c0, g)
